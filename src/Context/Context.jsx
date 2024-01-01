@@ -216,7 +216,8 @@ function AppContextProvider({ children }) {
     },
   ]);
   const [total, setTotal] = useState(null);
-  const handleRemove = (rev) => {
+  const handleRemove = (rev,el) => {
+    setTotal(total -( (+el.subtotal)+(+el.shipFee)));
     let newCart = cart.filter((item) => item.id !== rev);
     setCart(newCart);
   };

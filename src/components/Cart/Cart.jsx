@@ -97,7 +97,7 @@ function Cart() {
                   </div>
 
                   <button
-                    onClick={() => handleRemove(item.id)}
+                    onClick={() => handleRemove(item.id,item)}
                     className="btn btn-danger border-0 cart-remove"
                   >
                     Remove
@@ -142,8 +142,8 @@ function Cart() {
         })}
       </div>
       <div className="col border d-flex justify-content-between align-items-center border-dark-subtle rounded py-2 px-3 mt-6 total">
-        <p className="p-0 m-0">TOTAL AMOUNT</p>
-        <p className="p-0 m-0">${total ? total : "Add Items"}</p>
+        <p className="p-0 m-0 x">TOTAL AMOUNT</p>
+        <p className="p-0 m-0 y">${total ? total : "Add Items"}</p>
       </div>
     </div>
   );
